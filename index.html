@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script language="javascript">
+var nombre, mayu, ancho, chr;
+function blabla(){
+	nombre=document.getElementById("txtnombre").value;
+	ancho=nombre.length;
+	mayu=nombre.toUpperCase();
+	document.getElementById("txtnombre").value=mayu;
+	nombre=document.getElementById("txtnombre").value;
+	for (x=0; x<=ancho-1; x++)
+	{
+		chr=nombre.charAt(x);
+	if((chr>='A' && chr<='Z') || (chr==" "))
+	{
+	} 
+else
+	 {
+		alert("Caracteres incorrectos");
+		break;
+	}
+	}
+}
+var mail, ancho1, joya, pp, up, pp1, up1;
+function email(){
+mail=document.getElementById("txtmail").value;
+ancho1=mail.length;
+for(joya=0; joya<=ancho1-1; joya++)
+ {
+	if(((mail.charAt(0)>='0')&&(mail.charAt(0)<='9'))||(mail.charAt(0)=='@'))
+	{
+			alert("Primer caracter inválido");
+		break;}
+	else
+	{
+		pp=mail.indexOf('@');
+		up=mail.lastIndexOf('@');
+		if(pp!=up){
+			alert("Solo introduce un @");
+			break;
+		}
+		else{
+			if((pp==-1)&&(up==-1))
+			{
+			alert("Por favor introduce un @");	
+			break;
+				}
+				else{
+					pp1=mail.indexOf('.');
+				  if(pp1==-1){
+					  alert("Por favor introduce un punto");
+					  break;
+					  }
+			  }
+					}
+			}
+	}		
+ }
+function Tel(){
+	var nume, ancho3, numer;
+	nume=document.getElementById("txttel").value;
+	ancho3=nume.length;
+	for(v=0; v<=ancho3-1; v++){
+		numer=nume.charAt(v);
+	if(((numer>=0) && (numer<=9 ))|| (numer=='-'))
+	{
+		}
+		else{
+			alert("Caracteres Inválidos, Favor de introducir solo números");
+			document.getElementById("txttel").value="";
+				break;
+				
+			}
+		}
+	}
+
+	var texto, mayu1, ancho2;
+	function asunto(){
+		texto=document.getElementById("textarea").value;
+		ancho2=texto.length;
+		mayu1=texto.toUpperCase();
+		document.getElementById("textarea").value=mayu1;
+	}
+	var se;
+  var seg;
+	function segu(){
+    se=document.getElementById("txtseg").value;
+		seg=document.getElementById("txtse").value;
+    if(seg==se)
+	{
+		}
+    else{
+      alert("Valor de seguridad incorrecto");
+	document.getElementById("txtse").value="";
+    }
+	}
+	
+	var nomb, maile, telef, asu, segu;
+	var l1, l2, l3, l4, l5, se;
+function hola1(){
+	nomb=document.getElementById("txtnombre").value;
+	maile=document.getElementById("txtmail").value;
+  telef=document.getElementById("txttel").value;
+  asu=document.getElementById("textarea").value;
+  segu=document.getElementById("txtse").value;
+    se=document.getElementById("txtseg").value;
+    l1=nomb.length;
+    l2=maile.length;
+    l3=telef.length;
+    l4=asu.length;
+    l5=segu.length;
+if(se!=segu){ 
+alert("Valor de seguridad incorrecto");
+document.getElementById("txtse").value="";
+}else{
+if((l1==0) || (l2==0) || (l3==0) || (l4==0) || (l5==0))
+  {
+    alert("Introduzca todos los datos");
+  }
+  else{
+    alert("Mensaje enviado");
+    document.getElementById("txtnombre").value="";
+    document.getElementById("txtmail").value="";
+    document.getElementById("txttel").value="";
+    document.getElementById("textarea").value="";
+    document.getElementById("txtse").value="";
+  }
+}
+	}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Apple Inc.</h1>
+	</div>
+	<div data-role="content">	
+    <center><img src="appi/ap1.png" width=35% heigth=45%></center><br>
+    <br>
+		<ul data-role="listview">
+			<li><a href="#page2">¿Quiénes Somos?</a></li>
+      <li><a href="#page3">Productos</a></li>
+			<li><a href="#page4">Equipo</a></li>
+      <li><a href="#page5">Contáctanos</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Christian Castilla Marín</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Apple Inc.</h1>
+	</div>
+	<div data-role="content">
+            
+		<h1>Misión</h1>	
+        	Impulsar el desarrollo, productividad y eficiencia operativa de nuestros clientes a través de la integración y aprovechamiento de las tecnologías de la información en plataformas móviles en sus procesos de negocio.<br>
+        	<center><img src="appi/apple.jpg" width=25% heigth=35%></center>
+
+            <h1>Visión</h1>
+            Ser considerados por nuestros clientes y aliados estratégicos como una opción viable que ofrece soluciones y servicios basados en innovación, tecnología, servicio y calidad que supere sus expectativas. <br><br>
+
+            <center><img src="appi/applep.jpg" width=35% heigth=45%></center>
+
+        <h1>Valores</h1>
+        <ul>
+			<li>Investigación e innovación tecnológica constante para lograr el crecimiento deseado.</a></li>
+            <li>Calidad en los productos y servicios que desarrollamos y comercializamos.</a></li>
+			<li>Servicio y atención durante todo el ciclo comercial y post comercial.</a></li>
+            <li>Honestidad y lealtad que aseguren la integridad de la empresa.</a></li>
+		</ul>		
+            <center><img src="appi/apples.jpg" width=35% heigth=45%></center>
+    	</div>
+	<div data-role="footer">
+		<h4>Christian Castilla</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Productos</h1>
+	</div>
+	<div data-role="content">
+	<center><h1>iOS 7</h1>
+		<h2>Una nueva perspectiva para el sistema operativo móvil.</h2></center>
+		<center><img src="appi/ios.jpg" width=30% heigth=40%></center>
+		iOS 7 comenzó con la intención de mejorar una experiencia que las personas aman para hacerla todavía más simple, útil, agradable e igual de familiar al instante. Gracias a todo eso el diseño de iOS 7 es increíble, además de ser el comienzo de un nuevo capítulo para iOS<br>
+	<center><h1>iTunes</h1>
+		<h2>Entretenerse nunca fue tan fácil.</h2></center>
+		<center><img src="appi/itunes.jpg" width=35% heigth=45%></center>
+		iTunes es la forma más fácil de organizar y disfrutar la música, películas, apps y libros que ya tienes, y de comprar los que quieras.<br>
+	<center><h1>App Store</h1>
+		<h2>Cientos de miles de apps haciendo fila para sorprenderte.</h2></center>
+		<center><img src="appi/apps.jpg" width=30% heigth=40%></center>
+		Ya sea que quieras ser creativo, productivo, o simplemente entretenerte. En el App Store encontrarás más de 500,000 apps que convierten a tu equipo Apple en un mundo de posibilidades.<br>
+	<center><h1>iPhone 5s</h1>
+		<h2>Piensa más allá.</h2></center>
+			<center><table width="0" border="0">
+  <tr>
+    <td>Capacidad:</td>
+    <td>16 GB<br>32 GB<br>64 GB<br></td>
+  </tr>
+  <tr>
+    <td>Color:</td>
+    <td>Plata<br>Gris Espacial<br>Oro<br></td>
+  </tr>
+<tr>
+    <td>Pantalla:</td>
+    <td>Pantalla Retina de 4 pulgadas (diagonal)<br>
+	Resolución de 1136 x 640<br>
+	326 ppi<br></td>
+  </tr>
+  <tr>
+    <td>Cámara:</td>
+    <td>8 MP con pixeles 1.5µ<br> Flash True Tone<br> Lente de cinco elementos<br> Autoenfoque<br> Toque para enfocar<br> Detección de rostros<br> Función panorámica<br></td>
+  </tr></center>
+  </table>
+		<center><img src="appi/iphone5.jpg" width=35% heigth=45%></center>
+	<center><h1>iPhone 5c</h1>
+		<h2>Habla en colores.</h2></center>
+		<center><table width="0" border="0">
+  <tr>
+    <td>Capacidad:</td>
+    <td>16 GB<br>32 GB<br>64 GB<br></td>
+  </tr>
+  <tr>
+    <td>Color:</td>
+    <td>Blanco<br> Rosa<br> Amarillo<br> Azul<br> Verde<br></td>
+  </tr>
+<tr>
+    <td>Pantalla:</td>
+    <td>Pantalla Retina de 4 pulgadas (diagonal)<br>
+	Resolución de 1136 x 640<br>
+	326 ppi<br></td>
+  </tr>
+  <tr>
+    <td>Cámara:</td>
+    <td>8 MP con pixeles 1.5µ<br> Flash LED<br> Lente de cinco elementos<br> Autoenfoque<br> Toque para enfocar<br> Detección de rostros<br> Función panorámica<br></td>
+  </tr></center>
+  </table>
+			<center><img src="appi/iphone5c.jpg" width=35% heigth=45%></center>
+		<center><h1>MacBook Air</h1>
+		<h2>Todo el poder que quieres. Todo el día.</h2></center>
+		<center><table width="0" border="0">
+	
+	<tr>
+    <td>Pantalla:</td>
+    <td>Pantalla widescreen retroiluminada por LED de 11.6 o 13.3 pulgadas (diagonal)<br>
+	</td>
+  </tr>
+  <tr>
+    <td>Otras funcionalidades:</td>
+    <td>Dos puertos USB 3<br> Wi-Fi 802.11ac<br> Tecnología wireless<br> Bluetooh 4.0<br> Cámara FaceTime HD<br> Teclado retroiluminado a tamaño completo<br> Trackpad Multi-Touch<br> OS X Mavericks<br></td>
+  </tr></center>
+  </table>
+  		<center><img src="appi/mac.jpg" width=40% heigth=50%></center>
+  		<center><h1>iPod Touch</h1>
+		<h2>Para quien se toma la diversión en serio.</h2></center>
+		<center><table width="0" border="0">
+  <tr>
+    <td>Capacidad:</td>
+    <td>16 GB<br>32 GB<br>64 GB<br></td>
+  </tr>
+  <tr>
+    <td>Color:</td>
+    <td>Blanco<br> Rosa<br> Amarillo<br> Azul<br> Verde<br></td>
+  </tr>
+<tr>
+    <td>Pantalla:</td>
+    <td>Pantalla Retina Multi-Touch de 4 pulgadas (diagonal)<br>
+	Resolución de 1136 x 640<br>
+	326 ppi<br></td>
+  </tr>
+  <tr>
+    <td>Cámara:</td>
+    <td>iSight de 5 MP<br> Con grabación de video en HD de 1080p<br> Face Time HD<br></td>
+  </tr>
+	 <tr>
+    <td>Funcionalidades:</td>
+    <td>iOS 7<br> Siri<br> iMessage<br> Apps y Juegos<br> E-Mail e Internet<br></td>
+  </tr>
+</center>
+  </table>
+  		<center><img src="appi/ipod.jpg" width=40% heigth=50%></center>
+  	<center><h1>iPad Air</h1>
+		<h2>Poderosamente liviano.</h2></center>
+		<center><table width="0" border="0">
+  <tr>
+    <td>Capacidad:</td>
+    <td>16 GB<br>32 GB<br>64 GB<br> 128 GB<br></td>
+  </tr>
+<tr>
+    <td>Pantalla:</td>
+    <td>Pantalla Multi-Touch de 9.7 pulgadas (diagonal) retroiluminada por LED con tecnología IPS<br>
+	Resolución de 2048 x 1536 pixeles a 264 pixeles por pulgada (ppi)<br> Revestimiento oleofóbico resistente a marcas dactilares<br></td>
+  </tr>
+  <tr>
+    <td>Cámara:</td>
+    <td>Fotos de 1.2 MP<br> Video en HD de 720p<br> Videollamadas FaceTime a través de Wi-Fi o red celular<br> Detección de caras<br> Fotos de 5 MP<br> Autoenfoque<br> Detección de caras<br> Lente de cinco elementos <br> Face Time HD<br></td>
+  </tr>
+	 <tr>
+    <td>Funcionalidades:</td>
+    <td>Wi-Fi (802.11a/b/g/n)<br> Tecnología Bluetooh 4.0<br> GSM/EDGE<br> Solo datos<br></td>
+  </tr>
+</center>
+  </table>
+  <center><img src="appi/ipad.jpg" width=50% heigth=60%></center>
+	</div>
+	<div data-role="footer">
+		<h4>Apple Inc.</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo Apple</h1>
+	</div>
+	<div data-role="content">	
+	<center><img src="appi/chris.jpg" width=35% heigth=45%></center><br>
+	<center>Christian Castilla Marín<br>
+	16 años<br>
+	Técnico Programador<br>
+  Representante<br>
+  Asistente Personal<br>
+  Fotógrafo<br>
+  Maestro Pizzero<br>
+  
+	Actualmente estudia la prepa.<br></center>
+    <center><img src="appi/emma.jpg" width=35% heigth=45%></center>
+   <center> Emma Marina Ruis Cielo<br>
+    16 años<br>
+    Técnico Programador<br>
+    Especialista en Artes plásticas<br>
+    Diseñadora gráfica<br>
+    Actualmente estudia la prepa.<br></center>
+	</div>
+	<div data-role="footer">
+		<h4>Apple Inc.</h4>
+	</div>
+</div>
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>Contáctanos</h1>
+	</div>
+	<div data-role="content">
+    
+    <center><img src="appi/ap1.png" width=35% heigth=75%></center><br>	
+		<center><table width="0" border="0">
+  <tr>
+    <td><label for="textinput">Nombre</label></td>
+    <td><input type="text" name="txtnombre" id="txtnombre" value=""  /  onBlur="blabla()"></td>
+  </tr>
+  <tr>
+    <td><label for="textinput">E-Mail:</label></td>
+    <td><input type="text" name="txtmail" id="txtmail" value=""  / onBlur="email()"></td>
+  </tr>
+  <tr>
+    <td><label for="textinput">Teléfono:</label></td>
+    <td><input type="text" name="txttel" id="txttel" value="" onBlur="Tel()" /></td>
+  </tr>
+  <tr>
+    <td><label for="textarea">Asunto:</label></div></td>
+    <td><textarea cols="40" rows="8" name="textarea" id="textarea" onBlur="asunto()" ></textarea></td>
+  </tr>
+  <tr>
+    <td>Seguridad</td>
+    <td><input type="text" name="txtseg" id="txtseg" value="2014" disabled="disabled" />
+    <input type="text" name="txtse" id="txtse" value=""  onBlur="segu()" />
+    </tr>
+    <tr>
+    <td colspan="2"><button onClick="hola1()">Aceptar</button></td>
+  </tr>
+</table></center>
+<center>Dirección: Héroes del periférico sección 2. Calle 18 sur, privada 11903 Int. 28 Puebla, Puebla.<br>
+    Correo: myapple@apple.net<br>
+    Teléfono:2228618548<br></center>
+</div>
+	<div data-role="footer">
+		<h4>Apple Inc.</h4>
+	</div>
+</div>
+
+</body>
+</html>
